@@ -124,12 +124,12 @@ private
     return unless element = @comment_elements.detect{|e| e =~ /^win.*\d/i}
     @os_name = 'Windows'
     @os_version = case element
-    when /98/: '98'
-    when /9x 4.90/: 'ME'
-    when /NT 4.0/: 'NT'
-    when /NT 5.0/: '2000'
-    when /NT 5.1/: 'XP'
-    when /NT 6.0/: 'Vista'
+    when /98/ then '98'
+    when /9x 4.90/ then 'ME'
+    when /NT 4.0/ then 'NT'
+    when /NT 5.0/ then '2000'
+    when /NT 5.1/ then 'XP'
+    when /NT 6.0/ then 'Vista'
     end
   end
   
